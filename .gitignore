@@ -1,2 +1,5 @@
 .vim/undofiles*
 .vim/bundle
+
+.DS_Store
+.env*
