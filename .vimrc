@@ -16,16 +16,20 @@ Plugin 'VundleVim/Vundle.vim'
 " " alternatively, pass a path where Vundle should install plugins
 " "call vundle#begin('~/some/path/here')
 "
-" " let Vundle manage Vundle, required
-" Plugin 'VundleVim/Vundle.vim'
+" let Vundle manage Vundle, required
 
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'keith/rspec.vim'
+Plugin 'tpope/vim-surround'
 "
 " " All of your Plugins must be added before the following line
 " call vundle#end()            " required
@@ -66,6 +70,11 @@ map <Esc><Esc> :w<CR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
+color one
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
 map <C-n> :NERDTreeToggle<CR>
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2

@@ -13,7 +13,7 @@ export LIGHT_RED="\[\033[1;31m\]"
 export RED="\[\033[0;31m\]"
 export WHITE="\[\033[1;37m\]"
 export YELLOW="\[\033[0;33m\]"
-export PATH=/usr/local/git/bin:~/bin:$PATH
+export PATH=/usr/local/git/bin:~/bin:~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH
 export EDITOR='mvim'
 
 
@@ -101,6 +101,3 @@ server(){
   bundle exec rails s
 }
 
-run_brakeman(){
- bundle exec brakeman -o brakeman.html --test BasicAuth,ContentTag,CrossSiteScripting,DefaultRoutes,DigestDoS,EscapeFunction,Evaluation,Execute,FileAccess,FilterSkipping,ForgerySetting,JRubyXML,JSONParsing,LinkTo,LinkToHref,MailTo,MassAssignment,ModelAttributes,ModelSerialize,NestedAttributes,QuoteTableName,Redirect,Render,ResponseSplitting,SQL,SafeBufferManipulation,SanitizeMethods,SelectTag,SelectVulnerability,Send,SendFile,SessionSettings,SingleQuotes,SkipBeforeFilter,StripTags,SymbolDoS,TranslateBug,UnsafeReflection,ValidationRegex,WithoutProtection,YAMLLoad,YAMLParsing
-}
