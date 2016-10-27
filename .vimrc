@@ -21,6 +21,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -30,6 +31,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'keith/rspec.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'terryma/vim-multiple-cursors'
 "
 " " All of your Plugins must be added before the following line
 " call vundle#end()            " required
@@ -70,11 +74,26 @@ map <Esc><Esc> :w<CR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
-color one
-
+" NerdTree configuration
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-map <C-n> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>
 
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" airline theme configuration
+let g:airline_theme='one'
+
+" theme configuration
+set background=light        " for the light version
+let g:one_allow_italics = 1 " I love italic for comments
+colorscheme one
+
+" removing trailing spaces
+autocmd BufWritePre *.pl %s/\s\+$//e
+
+let g:buffergator_viewport_split_policy = 'B'
+
