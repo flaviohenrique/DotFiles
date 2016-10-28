@@ -93,7 +93,7 @@ let g:one_allow_italics = 1 " I love italic for comments
 colorscheme one
 
 " removing trailing spaces
-autocmd BufWritePre *.pl %s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 let g:buffergator_viewport_split_policy = 'B'
 
