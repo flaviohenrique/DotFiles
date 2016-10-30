@@ -1,6 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/git/bin:~/bin:~/.rbenv/shims:/usr/bin:/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+
 export TERM="xterm-256color"
+
+# projects path
+export PROJECTS_ROOT_PATH= "~/workspace"
 
 # # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -12,6 +18,8 @@ ZSH_THEME="powerline"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+eval "$(rbenv init -)"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
