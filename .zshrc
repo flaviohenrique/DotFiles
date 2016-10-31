@@ -6,7 +6,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export TERM="xterm-256color"
 
 # projects path
-export PROJECTS_ROOT_PATH= "~/workspace"
+export PROJECTS_ROOT_PATH="$HOME/workspace"
 
 # # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -14,8 +14,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerline"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerline"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -70,18 +70,22 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git osx history emoji bundler brew rbenv)
 
 #powerline configuration
-POWERLINE_PATH="short"
-POWERLINE_HIDE_USER_NAME="true"
-POWERLINE_RIGHT_A_COLOR_FRONT="black"
-POWERLINE_RIGHT_A_COLOR_BACK="red"
-POWERLINE_HIDE_HOST_NAME="true"
-POWERLINE_SHOW_GIT_ON_RIGHT="true"
+#POWERLINE_PATH="short"
+#POWERLINE_HIDE_USER_NAME="true"
+#POWERLINE_RIGHT_A_COLOR_FRONT="black"
+#POWERLINE_RIGHT_A_COLOR_BACK="red"
+#POWERLINE_HIDE_HOST_NAME="true"
+#POWERLINE_SHOW_GIT_ON_RIGHT="true"
 
 #powerlevel9
 #POWERLEVEL9K_MODE='awesome-fontconfig'
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('os_icon' 'todo' 'context' 'dir' 'vcs' 'status')
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('rbenv' 'rvm' 'load')
-
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="↳ "
+POWERLEVEL9K_COLOR_SCHEME='light'
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('todo'  'dir' 'vcs' 'status')
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('rbenv' 'rvm' 'rspec_stats')
 
 source $ZSH/oh-my-zsh.sh
 
