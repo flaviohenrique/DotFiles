@@ -34,6 +34,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'endel/vim-github-colorscheme'
 "
 " " All of your Plugins must be added before the following line
 " call vundle#end()            " required
@@ -83,6 +84,7 @@ map <C-b> :NERDTreeToggle<CR>
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+set number
 
 " airline theme configuration
 let g:airline_theme='one'
@@ -90,7 +92,7 @@ let g:airline_theme='one'
 " theme configuration
 set background=light        " for the light version
 let g:one_allow_italics = 1 " I love italic for comments
-colorscheme one
+colorscheme github
 
 " removing trailing spaces
 autocmd BufWritePre * :%s/\s\+$//e
