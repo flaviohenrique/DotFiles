@@ -81,9 +81,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 map <C-b> :NERDTreeToggle<CR>
 
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+:set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+
 set number
 
 " airline theme configuration
