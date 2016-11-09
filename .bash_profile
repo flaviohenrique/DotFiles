@@ -14,7 +14,7 @@ export RED="\[\033[0;31m\]"
 export WHITE="\[\033[1;37m\]"
 export YELLOW="\[\033[0;33m\]"
 export PATH=/usr/local/git/bin:~/bin:~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH
-export EDITOR='mvim'
+export EDITOR='vim'
 
 
 alias ls="ls -G"
