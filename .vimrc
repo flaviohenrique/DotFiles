@@ -35,7 +35,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'endel/vim-github-colorscheme'
-"
+Plugin 'pearofducks/ansible-vim'
+
 " " All of your Plugins must be added before the following line
 " call vundle#end()            " required
 " filetype plugin indent on    " required

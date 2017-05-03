@@ -1,7 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/git/bin:~/bin:~/.rbenv/shims:/usr/bin:/bin:$PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=/usr/local/bin/elixir:$PATH
+export PATH=/usr/bin/python:$PATH
+export PATH=/usr/local/bin/elixir:$PATH
 
 export TERM="xterm-256color"
 
@@ -10,6 +13,11 @@ export PROJECTS_ROOT_PATH="$HOME/workspace"
 
 # # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
+
+export WORKON_HOME=~/Envs
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -20,6 +28,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -114,8 +123,6 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
 
 #if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
 #	    source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
