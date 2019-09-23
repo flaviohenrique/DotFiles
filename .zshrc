@@ -1,11 +1,12 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/git/bin:~/bin:~/.rbenv/shims:/usr/bin:/bin:$PATH
+export PATH=$HOME/bin:$PATH
+export PATH=~/.nodenv/shims:$PATH
+export PATH=/usr/local/git/bin:~/bin:~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
-export PATH=/usr/local/bin/elixir:$PATH
 export PATH=/usr/bin/python:$PATH
-export PATH=/usr/local/bin/elixir:$PATH
-
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export TERM="xterm-256color"
 
 # projects path
@@ -14,21 +15,15 @@ export PROJECTS_ROOT_PATH="$HOME/workspace"
 # # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
-
 export WORKON_HOME=~/Envs
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="powerline"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+eval "$(nodenv init -)"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -106,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+export EDITOR='code'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -127,3 +122,11 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
 #	    source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 #fi
+
+#eval "$(pyenv virtualenv-init -)"
+
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
