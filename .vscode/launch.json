@@ -1,0 +1,85 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rails server",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/rails",
+            "useBundler": true,
+            "args": [
+                "server"
+            ]
+        },
+        {
+            "name": "RSpec - Features",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/rspec",
+            "useBundler": true,
+            "args": [
+                "--tag",
+                "type:feature"
+            ]
+        },
+        {
+            "name": "RSpec - Without Features",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/rspec",
+            "useBundler": true,
+            "args": [
+                "--tag",
+                "~type:feature",
+                "--format",
+                "documentation"
+            ]
+        },
+        {
+            "name": "Debug RSpec - open spec file",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "pathToBundler": "${workspaceRoot}/bin/bundle",
+            "pathToRDebugIDE": "${workspaceRoot}/bin/rdebug-ide",
+            "debuggerPort": "1235",
+            "showDebuggerOutput": true,
+            "useBundler": true,
+            "program": "${workspaceRoot}/bin/rspec",
+            "args": [
+                "${file}",
+                "--format",
+                "documentation"
+            ],
+            "env": {
+                "DISABLE_SPRING": 1
+            }
+        },
+        {
+            "name": "Debug RSpec - line number",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "pathToBundler": "${workspaceRoot}/bin/bundle",
+            "pathToRDebugIDE": "${workspaceRoot}/bin/rdebug-ide",
+            "debuggerPort": "1235",
+            "showDebuggerOutput": true,
+            "useBundler": true,
+            "program": "${workspaceRoot}/bin/rspec",
+            "args": [
+                "${file}:${lineNumber}",
+                "--format",
+                "documentation"
+            ],
+            "env": {
+                "DISABLE_SPRING": 1
+            }
+        }
+    ]
+}
